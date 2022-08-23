@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<!--Create a layout with div and apply float, border-box, margin, padding, background, colors
+properties in it? (Layout with proper content)
+Parent div is 95% of the screen and is in center
+e.g.: left sidebar: 20%, content: 60%, right sidebar 20%-->
+
+<head>
+    <title>10.8.2022 WEBUI Task</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .parent {
+            width: 95%;
+            float: center;
+        }
+
+        .header {
+            text-align: center;
+            background-color: pink;
+            border: 1px solid black;
+            color: white;
+            padding: 15px;
+        }
+
+        .middle {
+            width: 60%;
+            height: 500px;
+            background-color: lightgreen;
+            float: left;
+            padding: 15px;
+            border-bottom: 1px solid black;
+        }
+
+        .left {
+            width: 20%;
+            height: 500px;
+            background-color: lightblue;
+            float: left;
+            padding: 15px;
+            border: 1px solid black;
+            border-top:0px;
+        }
+
+        .right {
+            width: 20%;
+            height: 500px;
+            background-color: yellow;
+            float: right;
+            padding: 15px;
+            border: 1px solid black;
+            border-top:0px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="header">
+            <h1>10.8.2022 WEBUI Task</h1>
+        </div>
+        <div>
+
+            <div class="left">
+            </div>
+
+            <div class="middle">
+            </div>
+
+            <div class="right">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

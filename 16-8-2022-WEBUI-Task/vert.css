@@ -1,0 +1,23 @@
+ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    width:100px;
+    position:fixed;
+    overflow:auto;
+    height:100%;
+    background-color: rebeccapurple;
+}
+li a{
+    display:block;
+    color:white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover{
+    background-color:darkslateblue;
+}
+.active{
+    background-color: plum;
+}

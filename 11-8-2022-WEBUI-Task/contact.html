@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>11.8.2022 WEBUI Task</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a> </li>
+        <li><a href="gallery.html">Gallery</a> </li>
+        <li><a class="active" href="contact.html">Contact Us</a> </li>
+    </ul>
+    <p>Please fill out the following form to get in touch with us.</p>
+    <!--form-->
+    <form>
+        Name: <input type="text" placeholder="Enter Name" id="name" required/><br/> 
+        Email: <input type="email" placeholder="Enter Email" id="email" required/> <br/><!-- required makes field required - cant submit without -->
+        Message: <br/><textarea rows="4" cols="50" placeholder="Enter text here..." id="message" required></textarea><br/>
+        <input type="submit" value="Submit">
+        <input type="reset"><br/>
+    </form>
+</body>
+
+</html>

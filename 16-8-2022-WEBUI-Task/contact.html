@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>16.8.2022 WEBUI Task</title>
+    <link rel="stylesheet" href="vert.css" media="screen and (max-width:1024px)">
+    <link rel="stylesheet" href="horiz.css" media="screen and (min-width:1024px)">
+    <style>
+        input{
+            margin:5px;
+        }
+        @media screen and (max-width:1024px){
+            fieldset{
+                margin-left:110px;
+                padding:1px 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a> </li>
+        <li><a href="gallery.html">Gallery</a> </li>
+        <li><a class="active" href="contact.html">Contact Us</a> </li>
+    </ul>
+    <br/>
+    <fieldset>
+        <legend>Please fill out the following form to get in touch with us.</legend>
+        <!--form-->
+        <form>
+            Name: <input type="text" placeholder="Enter Name" id="name" required/><br/> 
+            Email: <input type="email" placeholder="Enter Email" id="email" required/> <br/><!-- required makes field required - cant submit without -->
+            Message: <br/><textarea rows="4" cols="50" placeholder="Enter text here..." id="message" required></textarea><br/>
+            <input type="submit" value="Submit">
+            <input type="reset"><br/>
+        </form>
+    </fieldset>
+</body>
+
+</html>

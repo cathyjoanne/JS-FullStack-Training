@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>16.8.2022 WEBUI Task</title>
+    <link rel="stylesheet" href="vert.css" media="screen and (max-width:1024px)">
+    <link rel="stylesheet" href="horiz.css" media="screen and (min-width:1024px)">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        div.gallery {
+            border: 1px solid pink;
+            float:left;
+            width:400px;
+            height:400px;
+            margin:10px;
+        }
+
+        div.gallery:hover {
+            border: 1px solid black;
+        }
+
+        div.gallery img {
+            float: left;
+            width:  400px;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        div.desc {
+            padding: 15px;
+            height:auto;
+            display:flex;
+            float:center;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        @media screen and (max-width:1024px){
+            div.all{
+                margin-left:100px;
+                padding:1px 16px;
+            }
+            div.gallery img {
+                width:  200px;
+                height: 150px;
+            }
+            div.gallery {
+                width:200px;
+                height:200px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <!--in line style-->
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a> </li>
+        <li><a class="active" href="gallery.html">Gallery</a> </li>
+        <li><a href="contact.html">Contact Us</a> </li>
+    </ul>
+    <div class="all">
+        <h2>Types of Clouds</h2>
+        <div class="gallery">
+            <a href="https://blog.prepscholar.com/hs-fs/hubfs/altocumulus.jpg?width=459&name=altocumulus.jpg" target="_blank">
+                <img src="https://blog.prepscholar.com/hs-fs/hubfs/altocumulus.jpg?width=459&name=altocumulus.jpg" alt="Altocumulus">
+            </a>
+            <div class="desc">
+                Altocumulus
+            </div>
+        </div>
+        <div class="gallery">
+            <a href="https://blog.prepscholar.com/hs-fs/hubfs/altostratus.jpg?width=542&name=altostratus.jpg" target="_blank">
+                <img src="https://blog.prepscholar.com/hs-fs/hubfs/altostratus.jpg?width=542&name=altostratus.jpg" alt="Altostratus">
+            </a>
+            <div class="desc">
+                Altostratus
+            </div>
+        </div>
+        <div class="gallery">
+            <a href="https://blog.prepscholar.com/hs-fs/hubfs/cirrocumulus.jpg?width=444&name=cirrocumulus.jpg" target="_blank">
+                <img src="https://blog.prepscholar.com/hs-fs/hubfs/cirrocumulus.jpg?width=444&name=cirrocumulus.jpg" alt="Cirrocumulus">
+            </a>
+            <div class="desc">
+                Cirrocumulus
+            </div>
+        </div>
+        <div class="gallery">
+            <a href="https://blog.prepscholar.com/hs-fs/hubfs/Cirrostratus.jpg?width=490&name=Cirrostratus.jpg" target="_blank">
+                <img src="https://blog.prepscholar.com/hs-fs/hubfs/Cirrostratus.jpg?width=490&name=Cirrostratus.jpg" alt="Cirrostratus">
+            </a>
+            <div class="desc">
+                Cirrostratus
+            </div>
+        </div>
+        <div class="gallery">
+            <a href="https://blog.prepscholar.com/hs-fs/hubfs/cirrus.jpg?width=512&name=cirrus.jpg" target="_blank">
+                <img src="https://blog.prepscholar.com/hs-fs/hubfs/cirrus.jpg?width=512&name=cirrus.jpg" alt="Cirrus">
+            </a>
+            <div class="desc">
+                Cirrus
+            </div>
+        </div>
+        <div class="gallery">
+            <a href="https://blog.prepscholar.com/hs-fs/hubfs/cumulonimbus.jpg?width=492&name=cumulonimbus.jpg" target="_blank">
+                <img src="https://blog.prepscholar.com/hs-fs/hubfs/cumulonimbus.jpg?width=492&name=cumulonimbus.jpg" alt="Cumulonimbus">
+            </a>
+            <div class="desc">
+                Cumulonimbus
+            </div>
+        </div>
+        <div class="gallery">
+            <a href="https://blog.prepscholar.com/hs-fs/hubfs/cumulus.jpg?width=488&name=cumulus.jpg" target="_blank">
+                <img src="https://blog.prepscholar.com/hs-fs/hubfs/cumulus.jpg?width=488&name=cumulus.jpg" alt="Cumulus">
+            </a>
+            <div class="desc">
+                Cumulus
+            </div>
+        </div>
+        <div class="gallery">
+            <a href="https://blog.prepscholar.com/hs-fs/hubfs/nimbostratus.jpg?width=480&name=nimbostratus.jpg" target="_blank">
+                <img src="https://blog.prepscholar.com/hs-fs/hubfs/nimbostratus.jpg?width=480&name=nimbostratus.jpg" alt="Nimbostratus">
+            </a>
+            <div class="desc">
+                Nimbostratus
+            </div>
+        </div>
+        <div class="gallery">
+            <a href="https://blog.prepscholar.com/hs-fs/hubfs/stratocumulus.jpg?width=547&name=stratocumulus.jpg" target="_blank">
+                <img src="https://blog.prepscholar.com/hs-fs/hubfs/stratocumulus.jpg?width=547&name=stratocumulus.jpg" alt="Stratocumulus">
+            </a>
+            <div class="desc">
+                Stratocumulus
+            </div>
+        </div>
+        <div class="gallery">
+            <a href="https://blog.prepscholar.com/hs-fs/hubfs/stratus.jpg?width=464&name=stratus.jpg" target="_blank">
+                <img src="https://blog.prepscholar.com/hs-fs/hubfs/stratus.jpg?width=464&name=stratus.jpg" alt="Stratus">
+            </a>
+            <div class="desc">
+                Stratus
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

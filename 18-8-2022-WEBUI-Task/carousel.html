@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>18.8.2022 WEBUI Task</title>
+  <!--bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <!--100% window height(vh) and width(vw)-->
+  <style>
+    .element {
+      height: 95vh;
+      width: 95vw;
+    }
+  </style>
+</head>
+<!--https://images.pexels.com/photos/1287142/pexels-photo-1287142.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500-->
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark navbar-fixed-top">
+    <!--add buttons to navbar-->
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="carousel.html">Carousel</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="table.html">Table</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100 element"
+          src="https://media.istockphoto.com/photos/dark-blue-stained-grungy-background-or-texture-picture-id1132593892?b=1&k=20&m=1132593892&s=170667a&w=0&h=YLC33uz4UHjZFBS1tRVOTNq-2VW6dlx5hh0Q2nC0L7g="
+          alt="First slide">
+        <div class="carousel-caption d-none d-md-block">
+          <h2>Blue</h2>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100 element" src="https://wallpaperaccess.com/full/1429581.jpg" alt="Second slide">
+        <div class="carousel-caption d-none d-md-block">
+          <h2>Green</h2>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100 element"
+          src="https://images.pexels.com/photos/1287142/pexels-photo-1287142.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+          alt="Third slide">
+        <div class="carousel-caption d-none d-md-block">
+          <h2>Pink</h2>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100 element" src="https://wallpaperaccess.com/full/1153069.jpg" alt="Third slide">
+        <div class="carousel-caption d-none d-md-block">
+          <h2>Red</h2>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100 element" src="https://wallpaperaccess.com/full/1381849.jpg" alt="Third slide">
+        <div class="carousel-caption d-none d-md-block">
+          <h2>Brown</h2>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</body>
+
+</html>

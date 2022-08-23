@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>media css practice</title>
+        <style>
+            *{
+                background:white;
+            }
+            #wrapper{
+                border:1px solid green;
+                width:1000px;
+                background:purple;
+                margin:0px auto;
+            }
+            @media screen and (max-width:1024px){
+                #wrapper{
+                    width:500px;
+                    background:blue;
+                }
+                #header h1{
+                    color:pink;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="header">
+                <h1>cgvak training</h1>
+            </div>
+        </div>
+    </body>
+</html>
