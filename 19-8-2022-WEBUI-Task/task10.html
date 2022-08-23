@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>19.8.2022 WEBUI Task</title>
+    <style>
+        /* Centered text */
+        .centered {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -30%);
+            background-image:url('https://thumbs.dreamstime.com/b/spring-summer-season-abstract-nature-background-grass-blue-sky-back-49716369.jpg');
+            font-family: impact;
+            font-size: 200px;
+        }
+
+        span.nav:hover,
+        span.nav:active {
+            background: orange;
+        }
+
+        div.scroll{
+            width: 300px;
+            height: 50px;
+            overflow:auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>1. Using HTML, CSS create a styled checkbox with animation on state change.</h2>
+    <form>
+        <input type="checkbox" value="oranges" /> Oranges
+        <input type="checkbox" value="bananas" /> Bananas <br />
+    </form>
+
+    <h2>2. Using HTML, CSS create display a text on top of an image using an overlay.</h2>
+    <div class="container">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Morning_views_from_the_summit_of_Mount_Kosciuszko%2C_Kosciuszko_National_Park_21.jpg/1200px-Morning_views_from_the_summit_of_Mount_Kosciuszko%2C_Kosciuszko_National_Park_21.jpg"
+            alt="Snow" style="width:100%;">
+        <div class="centered">TEXT</div>
+    </div>
+
+    <h2>3. Using HTML, CSS create a custom hover and focus effect for navigation items, using CSS transformations.</h2>
+    <span class="nav">Home</span>
+    <span class="nav">About</span>
+    <span class="nav">Contact</span>
+
+    <h2>4. Using HTML, CSS customizes the scrollbar style for elements with scrollable overflow.</h2>
+    <div class="scroll">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+        anim id est laborum.</div>
+
+</body>
+
+</html>
