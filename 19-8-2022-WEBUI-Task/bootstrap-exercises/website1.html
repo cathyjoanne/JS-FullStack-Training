@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--bootstrap 5.2-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <title>Bootstrap Exercises</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <style>
+        .caro-img {
+            height: 600px;
+            object-position: center;
+            object-fit: cover;
+        }
+
+        .top-bar {
+            background-color: #002248;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 5px;
+            overflow: hidden;
+        }
+
+        .apply {
+            background: #fec606;
+            padding: 5px;
+            color: #002248;
+            position: absolute;
+            top: 0px;
+            right: 5vw;
+            text-decoration: none;
+        }
+
+        a.apply:hover {
+            color: white;
+        }
+
+        .main-title {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            color: white;
+            font-weight: 800;
+            font-family: 'Trebuchet MS';
+            text-align: center;
+            width: 96.6667%;
+        }
+
+        .card {
+            position: relative;
+            /* top: 50%; */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            /* transform: translate(-50%, 0%); */
+        }
+
+        .grid-cont {
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            text-align: center;
+            top: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-bar">
+        &ensp;<i class="bi bi-telephone-fill" style="color:#fec606"></i> +142 5897555
+        &emsp;&emsp;&emsp; <i class="bi bi-envelope" style="color:#fec606"></i> info@example.com
+        <a class="apply">Apply Now</a>
+    </div>
+
+
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAeFBMVEX2qzj////2pyf2qTL85874vmr+8+b2qi/1pSD//fn3s0z4vm396tb3t1z98OD++PD73rr5x4n4xH33tFX72q35zpP+9ur616n61KL85MX3sUf2rj384sD727L++vP5w3f5zI/1oxP97Nr60pz4xXz3t1n5yIT3u2ExB2/lAAANL0lEQVR4nOWdaYPqKgyGW6ili+s41rFqtTpH//8/vHTTLnQhBK133m9nEfsIhRCSYJj/dxkv+RZ3YdsX67D8zrQ8WBfbXrgv+W7NhNHc+j77M2/PiOOQp/gf2N6b+edvax7pfQR9hK61PYWUEcIopYZI/O/Tfw5PW0sfphZC1z6uQt5NLWRNUt6n4e1oaxm2+ITB4ebxMTgMroTJx7F3OwToz4NMON/ODHm6EqUx29q4j4RJGPyEfGQC6R6UxAl/MHsSjXBxvKvjPSDvxwXWgyERWjcDCa+ANG5TnEdDIVyuUfEKyPUS4+HUCRdXpoEvY2RX9cGqShhs+PynT4RtVGcdNcJgRXXypYx0pdaPKoTuhjDNfIkY26gYOwqEW63jsyzCtm8g3Hmv4ksZvd2LCQNf0/zZJkp84JQDI/xxXsuXMjo/LyOcrl85QJ8ia4iZAyC8vniAPkXJ9QWE8zd1YCaynusm3L7hDSyLOrILhxxhdHLeypfIOcn5dKQIp+ErbJg+sfCii/D45hFaiDpHPYSr94/QQs5KA2E0eeccWheZDH4ZhxIuRvEKPsXCoXuqgYRTsIdQlygbaOAMI9yNDjBBHLbdGES4HNMr+BQZ5KkaQngczyRa1aBVYwDhdqyAHPEbg3DEgHyg9iP2Eo52iGbqH6h9hMtxA3LEvummh3A3zlm0LNKzaHQTTsdlyIjVs/R3Ei5GuNA3RVmnAddFGIWfAMgRwy4zvItw8gljNBGbwAhX459lCpGO/WI74cgXwqo6lsVWwuknAXLEVt9NG+GnzDKF2mebNsLTp8wyhdhJjnDU5rZYba5iMeH88wA5otjhLyZcf9ZLmImuhxNeP2clLEt8MiUinH4mIEcU2eAiwo8co4mE41RA+POpXcg7UXAQ3iQMAPNoGs6MIOXdmtMMZ2gS+tLfQknoX5eWupZXP1QLQqJ+P6G034KxG2IcemR9KTE2fRoNQk+uC2msGHbWVPClcE5JvT7CrVwXMvnIgQG6KBx0kbrxViN05ZomX3ryXlwfPp+z2iPVCDdSLcscxUrqC4xINl2EgVQXkl9tgHxKBw/UmuutSriSaZbOnh+MDtfTRFW/111phElOeSXC6siqEAZSjbLHJLM4UyfJblIVc4zNowMu4HFKg1ZCqbfwackfDDw7jxiPBe0MHafVN7FMuJB7C4uP4YZiPoNlFuA2Km9imVBqW8iKLkQ/nXIOectSs0JZlY1imVCqQSdPwArQdyKU5l1wAf92TEwoFY9A/+WfOuFvJtkN8pOXVY5hKBFKTc8sf5vnOryOTm7J38BpfmsRoSU13IpfSdKOlWv8G27YWAJCuR+s8KJrGKR8gHxljcNPoOmtSSg5N5N8opnpIKT3rHGVs5NFg/AouW3KCF2wbdWl4jVScEyTY4PwLveoYycshsGTUNb/NHbCx3r9IJR1IY6e8OFYLAhljwtHT0jDKqF0W6MnfBxF5YTSC/f4CQuXVE4ovawJCJPqFgoq/cYohIULIiMMpD/fJKTe1prCZW33z6YwCA0jKBEepM2jBiH1VB3fwWO2wyEkhxLhTXqH0CAs2bpQPX5nHMJ8E2ZUnxNO2B0+N0h28TvjEFLPfRDa8i01+1C96Moctw9zsyYllLS6hYQMlqVb1ga3D3PrOyWUfw0FcymRSSgT6bkmIxFmL2JKCIjwEqyHxPNVFD4HEhJhZrglhC6gIZFNo+jxLjWEQ2g4bk5oIRGiCYswXcEME+ZN+gzCbU4I8SZ9BCE95YSQUNLPIPQywgjykEJCpIkGjdCgUUoIcluLVov9TEX752OgESZHnIass7uVkChWrVqcsVf8bDI1gL7zptV2VuJL9FWy2uzN/X5VzrpKkvcM4DFd0/JWD6x5nGvTf9s4ZiRWPhNJfnYDEsgmIsTcPSXv9NK2j4ZyEUY/JQQdPejYAT8HJTXS5oO7Yi8mvhoDuKQ1vRj3zqcfIPcZuUuKg+6rWoxAsgk2zMUe8tnmXMr+7eYqOpSaep6NKZZT2S84oQ1qQoM3seS1K/Vs9KuyZPDH5ISgsa7TaquFwaoUjSEJISziQSMhXTv7StC9DS9N5Vw4IWR3qJOQnfh2rlabbQMtL+ZYnFDeG5w+hy5CyicHc+rFk8r6agGXRj4pG8CyHtoI43RddW+xUYnYDvagLyJLTggL6RARymUkiDMPHlF3BxbfyoiwjuCGKR4hNTZLGf14gmWqFLNq3+NyEDlsysckpKG003vS7EVWtt+vMXsW9pi/nfBhaA3XojGL1xKWrX3sF1HDV5BhgknIAOVF6ylkrB447v7G+8yih3Xh2wlrLjAaNnMbjsTZCP7rOwgH1MKpq+6kEKYPzr14Fpg3oFWTEmKth1S20q9dW+JEqXWJzg4DHB3lbS4xbRpyX8noVLPEaGtxix18B5XaNHh2KWUyqr9YpN0NIlhWBiq1S0eyt3DaVxuFpNZ0bzGO/SFpd0aqRJmm+0O0Pb6K6Lo1CS5S+Yp0j4/lp1FSh7cVPI8mSv00SL62RNCTmK7aeUoJK5mvDclfmiQEh56ESslSrJmfXEgtYSXzlyL5vA1ysyNXQouHMZVu61v0T81f6iOeWxQZBBIqEDtqysnltDaf8ox49gQ5mck/uWn9DzvVg/xvxPNDyMlMOgRbiq4kimDOmRJhdn54wTldkyojnin94o6AOHgucPGUF8RzfEG9hj6l+Y4dtSu/lTMb83N8pFgM4l+ihYTscwLQMUFd1O9wy2MxsOJpqNPvQizJYcYjBlQkd+1sFBEf8TRvjIkSbuszreIvQNxrtfUiJuqNcW1k3TbP7OIQL64teh/hlrSEpS4Y717l2MTIRI0vhTyCOV/HJ9GrOElOn9DiS3FihCHiP7K7ivfNl/HHScIC8GKEFeK8w0HVIloJk1Z2NK4XWps6LFInLMV5K8Tqr756dZp4pGVpy7KvAj++V/zJ7t5JjXG8WH14vsUwucHRd0RvgpOPz5/YKDuifvPCN3j5FvCcmeFanAX96BRhRpd9/DRulk6eO4iXMwPPe5KR3SyN9NwZul9xcQXQnGnIe5LPXQOlyDSqoparOyxJnjH4j2rIXZP31cDyR+o72kor9jr2o3RbryH/EGKagqItaxGjtQOrTcysxITUkUMq3xZloLulq0tvvbialSXO6MgDhhhuhN4A+/rf8rTdSAfb7bEI67ncsNMPRu7S14NWat5VQ6etVf47a8nHh9T0TJ7F2R8ly+6Vx+kzzDI4nhynOHHTUlNBti7Gk5EYG6lJxy29EOkm3HQv13vFrtNSFwNifRdi7CRzQeimlFjhm9Hu1jBb9dQ2gdcOM9J70IeH05RLzXk+I82th576NPCiTNlDOfufgT7h8jAVhxzqqTEEc32XGyV0NeyF7D2W11QnCl6K8SHGJkNyEjZ9Oxn1Wl+lSHFovba2pp2wf/Xo6xpt9drgDZbFV49rjznX81Pqq7mHVk6f0N/O1aNnN6qxbqJc7csuMTLrMOc6CbXWvlQ9ca0+6H7bVuyki1Bv/VLJGrQ94i/kWbx6LJ0Wp2OlBi38hoaOGrTwkS8WY75o9bDu4jrCJ/11hM0Fdp1H6niDLgttCn7+S7pqQWO+ibko2UOcAbrqeZuRjnKkhN4knTruSWGnU5vgFOvqD/1WMpFxBuisq49hnQol4QzQfDeCvns5E2dAvxv5BfdbKIQc94qx0+79d5RAfVIDn6Av20vx5x10z8z//66gP3Df0x+4s+v/f+/ah45Tmbvz/sD9h///Oyz/wD2kf+Au2Y+7D7jVu/eH73T+A/dy/4G71T9mtmmfZfoIzUD51sxXiHYnyncSmtNPGKes+4i9m1CfTwNPHXlhQwjxb+TCVkfOzTDCsS+LHQvhUEKFw/QXaECtin5ChAQrberIH5YhHO9A7R+iAwlRYhg0iAw61hpEaO5GuPRTNuwoZBghX/rHhkh7FnpZQjNQq0GJLhYOPZQcSmhGkzG9jGQy+M6XwYR8vzieKVXmMmkJQqUym5iig1YJCKFqQVgksVAmXleO0IxO7x+pzknu2iU5wsRV/N6RStscv2iE5hxeEBZBZC2dqiNNmJxMvasbqfh0CZ3QnL6pG8laaopRIMS+bHyYqAO7UQpGaAb+i4cqJT4kkQxOyLcb3iuHKvGkE6yUCfnCwV7FSJjsEoFDaEYb9gobh5GNZPIYGqFpLlZUdz8SugK+gCiEfMrZaB2rhG3U+NQJeT9emaZ5lRKmeDsPDiHX0tPASMkaGEBdFQqhaVo3AxWSv943iAEjEBIhH6zHu4MESYlzP6oPz1xohFz2T6gOyfFCUB58mzAJuebbmdFyJ8AQOj4vz7bqF0dVhEzIFRxuniNPyekc73bA7L1M+IRcrn288QEryPAVw1HCh+ZtaauYLq3SQpgqsrankPdMEtosJk0ynZJ/9k5bS/XK63bpI0wVza3vsz/z9nwMlkvy8T+wvTfzz9/WXB9cKs2EudyFbV+sw/I70/JgXWx7oWVQNvQawnfqP2lo6S9Nr959AAAAAElFTkSuQmCC"
+                    alt="mastery logo" width="30" height="30" class="d-inline-block align-text-top">
+                Mastery</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 mx-auto">
+                    <li class="nav-item px-3">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item dropdown px-3">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Pages
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Page 1</a></li>
+                            <li><a class="dropdown-item" href="#">Page 2</a></li>
+                            <li><a class="dropdown-item" href="#">Page 3</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search here..." aria-label="Search">
+                    <button class="btn" type="submit">
+                        <!--switch to glyphicon?-->
+                        <img src="https://www.freepnglogos.com/uploads/search-png/search-icon-transparent-images-vector-15.png"
+                            alt="search button" width="20" height="20" class="d-inline-block align-text-top">
+                    </button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="col-md-12">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <img src="https://www.allisonacademy.com/wp-content/uploads/2021/09/importance-of-education.png"
+                        class="d-block w-100 caro-img" alt="first image">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.usnews.com/dims4/USNEWS/5326bb2/2147483647/crop/2000x1334%2B0%2B0/resize/970x647/quality/85/?url=http%3A%2F%2Fmedia.beam.usnews.com%2Fa4%2F4f%2F98e60b6b4bbc861a009e715dc5d1%2F200710-stock.jpg"
+                        class="d-block w-100 caro-img" alt="second image">
+                </div>
+                <div class="carousel-item active">
+                    <img src="https://www.ppic.org/wp-content/uploads/graduates-2.jpg" class="d-block w-100 caro-img"
+                        alt="third image">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="main-title hidden-xs">
+            <div class="col-md-12 text-center">
+                <h1>Better Education For A<br />Better World</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container grid-cont ">
+        <div class="row g-5">
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="bi bi-laptop" style="color:#fec606; font-size: 2rem;"></i>
+                        <h5 class="card-title">Learn Courses Online</h5>
+                        <p class="card-text">Auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh
+                            vulputate
+                            cursus a sit amet.</p>
+                        <a href="#" class="btn btn-primary"
+                            style="background-color:#fec606; color:black; border-color: #fec606;">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="bi bi-people-fill" style="color:#fec606; font-size: 2rem;"></i>
+                        <h5 class="card-title">Highly Qualified Teachers</h5>
+                        <p class="card-text">Auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh
+                            vulputate
+                            cursus a sit amet.</p>
+                        <a href="#" class="btn btn-primary"
+                            style="background-color:#fec606; color:black; border-color: #fec606;">Read More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="bi bi-journal-text" style="color:#fec606; font-size: 2rem;"></i>
+                        <h5 class="card-title">Book Library & Stores</h5>
+                        <p class="card-text">Auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh
+                            vulputate
+                            cursus a sit amet.</p>
+                        <a href="#" class="btn btn-primary"
+                            style="background-color:#fec606; color:black; border-color: #fec606;">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
