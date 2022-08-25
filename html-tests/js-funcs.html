@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>js</title>
+</head>
+
+<body>
+    <script>
+        /*normal function
+        anonymous function
+        IIFE
+        arrow function*/
+
+        normal(a){
+            return a;
+        }
+
+        (function () {
+        //https://www.javascripttutorial.net/javascript-anonymous-functions/
+        });
+
+        for (var i = 0; i < 2; i++) {
+        const button = document.createElement('button');
+        button.innerText = `Button ${i}`;
+        button.onclick = (function(copyOfI) {
+            return () => {
+            console.log(copyOfI);
+            };
+        })(i);
+        document.body.appendChild(button);
+        }
+        console.log(i); // 2
+
+        (() => {
+        //https://developer.mozilla.org/en-US/docs/Glossary/IIFE
+        })();
+
+        // Traditional Anonymous Function
+        (function (a, b) {
+        return a + b + 100;
+        });
+
+        // Arrow Function https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+        (a, b) => a + b + 100;
+
+        let arr = [1, 2, 3, 4, 5];
+        console.log(`The values in the array are: ${arr[0]}, ${arr[1]}, ${arr[2]}, ${arr[3]}, ${arr[4]},`);
+        max = 0;
+        arr.forEach(function (val) {
+            if (val > max) { max = val; }
+        })
+        console.log(`The largest value in the array is: ${max}`);
+    </script>
+</body>
+
+</html>
