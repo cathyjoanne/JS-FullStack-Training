@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--bootstrap 5.2-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <title>19.8.2022 WEBUI Task - Website 3</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <style>
+        .caro-img {
+            height: 600px;
+            object-position: center;
+            object-fit: cover;
+        }
+
+        .main-title {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, 0%);
+            color: white;
+            font-weight: 800;
+            font-family: 'Trebuchet MS';
+            text-align: center;
+            width: 96.6667%;
+        }
+
+        .card {
+            border-color: #f0f0f0;
+        }
+
+        .no-pad{
+            padding:0px;
+        }
+
+        .grid-cont {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+
+                <H2>Site Name</H2>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+                    <li class="nav-item px-3">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link">Project</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="col-md-12">
+        <img src="https://mymodernmet.com/wp/wp-content/uploads/2019/10/great-wall-of-china-facts-thumbnail.jpg"
+            class="w-100 caro-img" alt="great wall">
+    </div>
+
+    <h2 class="text-center"><br />Loren ipsum dolor sit amet<br /><br /></h2>
+    <h5 class="text-center">Donec odio uique volutpat mattis eros ullam malesuada erat ut turpis.</h5>
+
+    <div class="container grid-cont ">
+        <div class="row">
+            <div class="col-lg-4 col-md-6 col-sm-12 no-pad">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="bi bi-grid-1x2" style="color:#fec606; font-size: 2rem;"></i>
+                        <h5 class="card-title">Responsive Design</h5>
+                        <p class="card-text">Auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh
+                            vulputate
+                            cursus a sit amet.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 no-pad">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="bi bi-graph-up-arrow" style="color:#fec606; font-size: 2rem;"></i>
+                        <h5 class="card-title">Business Solutions</h5>
+                        <p class="card-text">Auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh
+                            vulputate
+                            cursus a sit amet.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 no-pad">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="bi bi-activity" style="color:#fec606; font-size: 2rem;"></i>
+                        <h5 class="card-title">Brand Identity</h5>
+                        <p class="card-text">Auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh
+                            vulputate
+                            cursus a sit amet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

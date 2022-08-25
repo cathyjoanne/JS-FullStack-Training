@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>js</title>
+</head>
+
+<body>
+    <script>
+        // assume max grade points is 100
+        let a=5;
+        let b = 10;
+        let c = 20;
+        let d = 7;
+        let e = 20;
+        let total = a+b+c+d+e;
+        let percent = total/100;
+        console.log(`The student recieved ${total} total points.`);
+        if (percent>.8){
+            console.log("The student got an A in the class");
+        } else if (percent>.6){
+            console.log("The student got an B in the class");
+        } else if (percent>.45){
+            console.log("The student got an C in the class");
+        } else {
+            console.log("The student has FAILED the class");
+        }
+    </script>
+</body>
+
+</html>
