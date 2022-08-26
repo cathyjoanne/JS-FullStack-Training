@@ -55,11 +55,18 @@
         .card {
             position: relative;
             border-color: #f0f0f0;
+            transition: transform .7s;
+            border-radius: 15px;
         }
 
         .grid-cont {
             text-align: center;
         }
+        
+        .card:hover {
+            transform: scale(1.07);
+            box-shadow: 2px 2px 2px 2px #f85402;
+        } 
     </style>
 </head>
 
@@ -144,13 +151,14 @@
         </div>
     </div>
 
-    <h2 class="text-center"><br/><br/>Our Services<br/><br/></h2>
+    <!--add transitions to the cards-->
+    <h2 class="text-center"><br /><br />Our Services<br /><br /></h2>
     <div class="container grid-cont ">
         <div class="row g-5">
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="card text-center">
                     <div class="card-body">
-                        <i class="bi bi-grid-1x2" style="color:#fec606; font-size: 2rem;"></i>
+                        <i class="bi bi-grid-1x2" style="color:#f85402; font-size: 2rem;"></i>
                         <h5 class="card-title">Responsive Design</h5>
                         <p class="card-text">Auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh
                             vulputate
@@ -161,7 +169,7 @@
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="card text-center">
                     <div class="card-body">
-                        <i class="bi bi-graph-up-arrow" style="color:#fec606; font-size: 2rem;"></i>
+                        <i class="bi bi-graph-up-arrow" style="color:#f85402; font-size: 2rem;"></i>
                         <h5 class="card-title">Business Solutions</h5>
                         <p class="card-text">Auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh
                             vulputate
@@ -172,7 +180,7 @@
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div class="card text-center">
                     <div class="card-body">
-                        <i class="bi bi-activity" style="color:#fec606; font-size: 2rem;"></i>
+                        <i class="bi bi-activity" style="color:#f85402; font-size: 2rem;"></i>
                         <h5 class="card-title">Brand Identity</h5>
                         <p class="card-text">Auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh
                             vulputate

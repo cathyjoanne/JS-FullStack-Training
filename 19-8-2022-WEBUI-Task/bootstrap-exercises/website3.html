@@ -13,14 +13,18 @@
 
     <style>
         .caro-img {
-            height: 600px;
+            height: 520px;
             object-position: center;
             object-fit: cover;
         }
 
+        .text-center {
+            color: #637e85;
+        }
+
         .main-title {
             position: absolute;
-            top: 30%;
+            top: 20%;
             left: 50%;
             transform: translate(-50%, 0%);
             color: white;
@@ -30,12 +34,20 @@
             width: 96.6667%;
         }
 
-        .card {
-            border-color: #f0f0f0;
+        .card:hover {
+            transform: scale(1.07);
         }
 
-        .no-pad{
-            padding:0px;
+        .card {
+            border-color: #f0f0f0;
+            background-color: #f6f6f6;
+            transition: transform .7s;
+            border-radius: 15px;
+        }
+
+        .no-pad {
+            padding: 0px;
+            margin: 0px;
         }
 
         .grid-cont {
@@ -48,8 +60,7 @@
     <nav class="navbar navbar-expand-lg fixed-top bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-
-                <H2>Site Name</H2>
+                <H2 style="color:#637e85;">Site Name</H2>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -85,47 +96,84 @@
         <img src="https://mymodernmet.com/wp/wp-content/uploads/2019/10/great-wall-of-china-facts-thumbnail.jpg"
             class="w-100 caro-img" alt="great wall">
     </div>
+    <i class="bi bi-circle-fill main-title" style="color:white; font-size: 2.5rem; top:35.5%"></i>
+    <div class="main-title">
+        <h1 style="text-decoration:underline">Loren ipsum laro<br />dolore sit amet vivamus</h1>
+        <h5>LOREM IPSUM LARO SIT AMET <br />DOLORE SIT AME</h5>
+        <i class="bi bi-arrow-down-circle-fill" style="color:#e5541d; font-size: 3rem;"></i>
+    </div>
 
-    <h2 class="text-center"><br />Loren ipsum dolor sit amet<br /><br /></h2>
-    <h5 class="text-center">Donec odio uique volutpat mattis eros ullam malesuada erat ut turpis.</h5>
+
+    <h2 class="text-center"><br />Loren ipsum dolor sit amet</h2>
+    <h5 class="text-center">Donec odio uique volutpat mattis eros ullam malesuada erat ut
+        turpis.<br /><br /><br /><br /></h5>
 
     <div class="container grid-cont ">
-        <div class="row">
-            <div class="col-lg-4 col-md-6 col-sm-12 no-pad">
-                <div class="card text-center">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6 col-sm-12 no-pad">
+                <div class="card text-center ">
                     <div class="card-body">
-                        <i class="bi bi-grid-1x2" style="color:#fec606; font-size: 2rem;"></i>
-                        <h5 class="card-title">Responsive Design</h5>
+                        <i class="bi bi-laptop" style="color:#e5541d; font-size: 2rem;"></i>
+                        <h5 class="card-title">Learn Courses Online</h5>
                         <p class="card-text">Auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh
                             vulputate
                             cursus a sit amet.</p>
+                        <a href="#" class="btn btn-primary"
+                            style="background-color:#637e85; color:white; border-color: #637e85;">More</a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 no-pad">
+            <div class="col-lg-3 col-md-6 col-sm-12 no-pad">
                 <div class="card text-center">
                     <div class="card-body">
-                        <i class="bi bi-graph-up-arrow" style="color:#fec606; font-size: 2rem;"></i>
-                        <h5 class="card-title">Business Solutions</h5>
+                        <i class="bi bi-people-fill" style="color:#e5541d; font-size: 2rem;"></i>
+                        <h5 class="card-title">Highly Qualified Teachers</h5>
                         <p class="card-text">Auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh
                             vulputate
                             cursus a sit amet.</p>
+                        <a href="#" class="btn btn-primary"
+                            style="background-color:#637e85; color:white; border-color: #637e85;">More</a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 no-pad">
+            <div class="col-lg-3 col-md-6 col-sm-12 no-pad">
                 <div class="card text-center">
                     <div class="card-body">
-                        <i class="bi bi-activity" style="color:#fec606; font-size: 2rem;"></i>
-                        <h5 class="card-title">Brand Identity</h5>
+                        <i class="bi bi-journal-text" style="color:#e5541d; font-size: 2rem;"></i>
+                        <h5 class="card-title">Book Library & Stores</h5>
                         <p class="card-text">Auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh
                             vulputate
                             cursus a sit amet.</p>
+                        <a href="#" class="btn btn-primary"
+                            style="background-color:#637e85; color:white; border-color: #637e85;">More</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 no-pad">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="bi bi-journal-text" style="color:#e5541d; font-size: 2rem;"></i>
+                        <h5 class="card-title">Book Library & Stores</h5>
+                        <p class="card-text">Auci elit cons equat ipsutis sem nibh id elit. Duis sed odio sit amet nibh
+                            vulputate
+                            cursus a sit amet.</p>
+                        <a href="#" class="btn btn-primary"
+                            style="background-color:#637e85; color:white; border-color: #637e85;">More</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <br>
+    <h2 class="text-center">Cras ornare tristique elit</h2>
+    <h5 class="text-center">Donec odio uique volutpat mattis eros ullam malesuada erat ut
+        turpis.</h5>
+    <hr>
+    <div class="text-center" style="color:#e5541d; font-size:2rem">
+        <i class="bi bi-arrow-left-circle-fill"> &nbsp; </i><i class="bi bi-arrow-right-circle-fill"></i>
+    </div>
+
 
 </body>
 

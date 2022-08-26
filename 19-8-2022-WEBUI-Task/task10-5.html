@@ -3,14 +3,16 @@
 
 <head>
     <style>
-        body{
-            font-size:0;
-            margin:0px;
+        body {
+            font-size: 0;
+            margin: 0px;
         }
+
         .sidenav {
-            display: none;
+            display: block;
             height: 100%;
-            width: 250px;
+            width: 0px;
+            transition: 0.5s;
             position: fixed;
             z-index: 1;
             top: 0;
@@ -20,7 +22,7 @@
             padding-top: 60px;
         }
 
-        .vert-center{
+        .vert-center {
             margin: 0;
             position: absolute;
             top: 50%;
@@ -37,11 +39,11 @@
             display: block;
         }
 
-        .rose{
+        .rose {
             width: 100%;
-            padding:0px;
-            display:block;
-            font-size:0;
+            padding: 0px;
+            display: block;
+            font-size: 0;
             height: 2000px;
             object-fit: cover;
         }
@@ -72,16 +74,20 @@
         </div>
     </div>
 
-    <img style="cursor:pointer" class="rose" onmouseenter="openNav()" onmouseleave="closeNav()" src="https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?cs=srgb&dl=pexels-jonas-kakaroto-736230.jpg&fm=jpg" class="rose">
+    <img style="cursor:pointer" class="rose" onmouseenter="openNav()" onmouseleave="closeNav()"
+        src="https://images.pexels.com/photos/736230/pexels-photo-736230.jpeg?cs=srgb&dl=pexels-jonas-kakaroto-736230.jpg&fm=jpg"
+        class="rose">
 
 
     <script>
         function openNav() {
-            document.getElementById("mySidenav").style.display = "block";
+            document.getElementById("mySidenav").style.width = "250px";
+            // document.getElementById("mySidenav").style.display = "block";
         }
 
         function closeNav() {
-            document.getElementById("mySidenav").style.display = "none";
+            document.getElementById("mySidenav").style.width = "0px";
+            // document.getElementById("mySidenav").style.display = "none";
         }
     </script>
 

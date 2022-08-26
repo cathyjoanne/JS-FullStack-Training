@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <h2>clock</h2>
+    <p id="target" align="center"></p>
+    <script>
+        ind = 0;
+        function clock() {
+            let d=new Date();
+            let tim=d.hours()+":"+"d.getMinute()"+":"+"d.getSeconds"();
+            document.getElementById("target").textContent = tim;
+        }
+        setInterval(clock, 1000);
+    </script>
+</body>
+
+</html>

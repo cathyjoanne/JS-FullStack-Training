@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <h2>changing color</h2>
+    <script>
+        ind = 0;
+        function bgchange() {
+            let arr = ["blue", "pink", "yellow", "green", "grey", "purple"]
+            document.bgColor = arr[ind];
+            ind++;
+            if (ind == 6) { ind = 0; }
+        }
+        setInterval(bgchange, 3000);
+    </script>
+</body>
+
+</html>
