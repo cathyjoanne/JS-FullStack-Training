@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>26-8-2022 JS Task</title>
+</head>
+
+<body>
+    <h2>Digital Clock</h2>
+    <p id="target"></p>
+    <script>
+        function clock() {
+            let d = new Date();
+            if (d.getHours() > 12) {
+                tim = (d.getHours() - 12) + ":" + d.getMinutes() + ":" + d.getSeconds() + " PM";
+            } else {
+                tim = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds() + " AM";
+            }
+            document.getElementById("target").textContent = tim;
+        }
+        setInterval(clock, 1000);
+    </script>
+</body>
+
+</html>

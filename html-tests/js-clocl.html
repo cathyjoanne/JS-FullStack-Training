@@ -7,12 +7,11 @@
 
 <body>
     <h2>clock</h2>
-    <p id="target" align="center"></p>
+    <p id="target"></p>
     <script>
-        ind = 0;
         function clock() {
-            let d=new Date();
-            let tim=d.hours()+":"+"d.getMinute()"+":"+"d.getSeconds"();
+            let d = new Date();
+            let tim = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
             document.getElementById("target").textContent = tim;
         }
         setInterval(clock, 1000);

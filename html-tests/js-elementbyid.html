@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <p id="target">text</p>
+    <button onclick="xyz()">preform</button>
+    <script>
+        function xyz(){
+            let para=document.getElementById("target");
+            let content=para.innerHTML;
+            alert(content)
+            // updating content
+            para.innerHTML="hello";
+            para.style.color="pink";
+            para.style.border="2px solid purple";
+        }
+    </script>
+</body>
+
+</html>
