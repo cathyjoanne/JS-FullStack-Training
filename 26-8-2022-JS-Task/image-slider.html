@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>js</title>
+</head>
+
+<body>
+    <img src="https://i.pinimg.com/736x/58/b1/80/58b180bcba5a92d7d95c58153c9ce5b2.jpg" width="500" height="500"
+        id="cats" />
+    <script>
+        let arr = ["https://i.pinimg.com/736x/2e/af/fe/2eaffe3fec1984adf62b9e25c57e9591.jpg", "https://i.pinimg.com/564x/b2/47/fb/b247fb3d7abe47c3a30ba8530520931f.jpg", "https://i.pinimg.com/564x/6b/fd/9d/6bfd9d855c725245e9918932486b604f.jpg","https://i.pinimg.com/originals/28/c6/39/28c639581625df2ceca92b9457bb4aaa.jpg","https://i.pinimg.com/736x/58/b1/80/58b180bcba5a92d7d95c58153c9ce5b2.jpg"];
+        
+        i=0;
+        setInterval(function(){
+            document.getElementById("cats").src = arr[i];
+            i++;
+            if (i == 5) {
+                i = 0;
+            }
+        }, 1000);
+
+    </script>
+</body>
+
+</html>
