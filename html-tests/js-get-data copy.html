@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>26-8-2022 JS Task</title>
+</head>
+
+<body>
+    <h2>form example</h2>
+    <form action="/signup" method="post" id="signup">
+        <input type="text" id="name" name="name" /><br />
+        <input type="text" id="email" name="email" /><br />
+
+        <input type="submit" value="send" />
+    </form>
+    <script>
+        function showMessage(input, message, type) {
+            const msg = input.parentNode.querySelector("small");
+            msg.innerText = message; //innertext cannot be null
+            input.className = type ? "success" : "error";
+            msg.className = type ? "success" : "error1";
+            return type;
+        }
+        function hasValue(input, message) {
+            if (input.value.trim() === "") {
+                return showError(input, message);
+            }
+            return showSuccess(input);
+        }
+
+        function showError(input, message) {
+            return showMessage(input, message, false);
+        }
+        function showSuccess(input) {
+            return showMessage(input, " ", true);
+        }
+
+        const form = document.getElementById("signup");
+        const NAME_REQUIRED = "Please enter your name";
+        const EMAIL_REQUIRED = "Please enter your email";
+        
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            let name = form.elements['name'];
+            let email = form.elements['email'];
+            let nameValid = hasValue(name, NAME_REQUIRED);
+            let emailValid = hasValue(email, EMAIL_REQUIRED);
+            if (nameValid && emailValid) {
+                alert("Form Post");
+            }
+            form.submit();
+            console.log(name+" - "+email);
+            //validation 
+        })
+
+    </script>
+</body>
+
+</html>
