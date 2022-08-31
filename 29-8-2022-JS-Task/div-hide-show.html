@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>29.8.2022 JS Task</title>
+    <style>
+        .left {
+            width: 50%;
+            float: left;
+        }
+
+        .right {
+            width: 50%;
+            float: right;
+        }
+
+        img {
+            width: 20vw;
+            height: 20vw;
+        }
+        .show{
+            transform: translateY(40vw);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="left" id="this">
+            <img src="https://i.pinimg.com/736x/58/b1/80/58b180bcba5a92d7d95c58153c9ce5b2.jpg" id=target />
+            <img src="https://i.pinimg.com/736x/2e/af/fe/2eaffe3fec1984adf62b9e25c57e9591.jpg" id=target />
+            <img src="https://i.pinimg.com/564x/b2/47/fb/b247fb3d7abe47c3a30ba8530520931f.jpg" id=target />
+            <img src="https://i.pinimg.com/564x/6b/fd/9d/6bfd9d855c725245e9918932486b604f.jpg" id=target />
+        </div>
+        <div class="right">
+            <img src="https://i.pinimg.com/736x/58/b1/80/58b180bcba5a92d7d95c58153c9ce5b2.jpg" id=target />
+            <img src="https://i.pinimg.com/736x/2e/af/fe/2eaffe3fec1984adf62b9e25c57e9591.jpg" id=target />
+            <img src="https://i.pinimg.com/564x/b2/47/fb/b247fb3d7abe47c3a30ba8530520931f.jpg" id=target />
+            <img src="https://i.pinimg.com/564x/6b/fd/9d/6bfd9d855c725245e9918932486b604f.jpg" id=target />
+        </div>
+    </div>
+
+    <button onclick="hide()" id="hide">hide</button>
+    <button onclick="show()" style="display:none" id="show" class="show">show</button>
+    <script>
+        function hide() {
+            document.getElementById("this").style.display = "none";
+            document.getElementById("show").style.display = "block";
+            document.getElementById("hide").style.display = "none";
+        }
+        function show() {
+            document.getElementById("this").style.display = "block";
+            document.getElementById("hide").style.display = "block";
+            document.getElementById("show").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
