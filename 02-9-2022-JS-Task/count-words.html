@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>2-9-2022 JS Task</title>
+</head>
+
+<body>
+    <script>
+        //test string
+        const test = "check if the first letter is uppercase";
+
+        //code to check number of words
+        total = 0;
+        prevchar = null;
+        for (let i = 0; i<test.length; i++){
+            if (test.charAt(i) == ' '){
+                if (prevchar != ' '){
+                    total+=1;
+                }
+            }
+            prevchar = test.charAt(i);
+        }
+        if (test.charAt(test.length)!=' '){
+            total+=1;
+        }
+        console.log(total);
+
+    </script>
+</body>
+
+</html>
