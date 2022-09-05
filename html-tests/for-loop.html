@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            function Person(){
+                this.name="saeran";
+                this.age=100;
+            }
+            Person.prototype.gender="female"; //adds it to the main func
+            const obj = new Person();
+            const obj2 = new Person();
+            obj.gender="female";
+            console.log(obj.gender);
+            console.log(obj2.gender);
+            for (let o in obj){
+                console.log(o); //gives the key
+                console.log(obj[o]); //gives the value
+            }
+            arr=[1,2,3,4];
+            for(let o of arr){
+                console.log(o);
+            }
+
+            //spread implementation
+            // the ... copies over the stuff to the new array (copies entire array)
+            let newarr=[...arr,7,8,...arr];
+            for(let o of newarr){
+                console.log(o); //output: 1,2,3,4, 7,8, 1,2,3,4
+            }
+            let obj3={name:'one',age:2};
+            let obj4={...obj,name:'two'};
+            console.log(obj4.name);
+
+            //rest parameter also implemented w ...
+            //known as last formal parameter of the function
+            //basically takes any number of inputs and puts them in an array and passes them into the function
+            // used like func(...inputs){} and then inputs would be an array w all the inputs
+
+
+            //class,onjects,constructors
+            class car{
+                constructor(){ //used to initialize object
+                    this.speed=40;
+                }
+                acc(){
+                    this.speed+=32;
+                }
+                checkspeed(){
+                    console.log(`speed is ${this.speed}`);
+                }
+            }
+            const obj = new car();
+            obj.acc(); //increases speed
+                         
+            //alternate
+            class car2{
+                constructor(speed){ //used to initialize object
+                    this._speed=speed;//underscore doesnt matter just what sumit used as name for funsies
+                }
+                get speed(){
+                    return this._speed;
+                }
+                set speed(newspeed){
+                    this._speed=newspeed;
+                }
+            }
+            const obj = new car2(75); //setting starting speed to 75
+            console.log(obj.speed); //gets speed
+            obj.speed=100; //sets speed to 100
+            console.log(obj.speed); //gets speed
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>26-8-2022 JS Task</title>
+    <style>
+        .success {
+            color: green;
+            border: 1px solid green;
+        }
+
+        .error {
+            border: 1px solid red;
+            color:red;
+        }
+
+        .error1 {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>form example</h2>
+    <form action="/signup" method="post" id="signup">
+        <div><input type="text" id="Fname" name="fname" placeholder="first name" />
+            <small></small>
+        </div>
+        <div><input type="text" id="Lname" name="lname" placeholder="last name" />
+            <small></small>
+        </div>
+        <div><input type="text" id="email" name="email" placeholder="email" />
+            <small></small>
+        </div>
+        <div><input type="password" id="password" name="password" placeholder="password" />
+            <small></small>
+        </div>
+        <div>
+            Gender: <input type="radio" id="gender" name="gender" value="male" /> Male
+            <input type="radio" id="gender2" name="gender" value="female" checked /> Female
+            <small></small>
+        </div>
+        <div><input type="text" id="number" name="number" placeholder="phone number" />
+            <small></small>
+        </div>
+
+        <input type="submit" value="Send" />
+    </form>
+    <script>
+        function showMessage(input, message, type) {
+            const msg = input.parentNode.querySelector("small");
+            msg.innerText = message; //innertext cannot be null
+            input.className = type ? "success" : "error";
+            msg.className = type ? "success" : "error1";
+            return type;
+        }
+
+        function hasValue(input, message) {
+            if (input.value.trim() === "") {
+                return showError(input, message);
+            }
+            return showSuccess(input);
+        }
+
+        function showError(input, message) {
+            return showMessage(input, message, false);
+        }
+        function showSuccess(input) {
+            return showMessage(input, "", true);
+        }
+
+        //validation
+        function validateEmail(input, reqMessage, invalidMessage) {
+            if (!hasValue(input, reqMessage)) {
+                return false;
+            }
+            //validate email formet 
+            const emailRegex = /^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/;
+            const email = input.value.trim();
+            if (!emailRegex.test(email)) {
+                return showError(input, invalidMessage)
+            }
+            return true;
+        }
+
+        function validateNumber(input, reqMessage, invalidMessage) {
+            if (!hasValue(input, reqMessage)) {
+                return false;
+            }
+            //validate email formet 
+            const numRegex = /^(\+\d{1,2}\s?)?1?\-?\.?\s?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/;
+            const num = input.value.trim();
+            if (!numRegex.test(num)) {
+                return showError(input, invalidMessage)
+            }
+            return true;
+        }
+
+
+        const form = document.getElementById("signup");
+        const FNAME_REQUIRED = "Please enter your first name";
+        const LNAME_REQUIRED = "Please enter your last name";
+        const EMAIL_REQUIRED = "Please enter your email";
+        const EMAIL_INVALID = "Please enter a correct email";
+        const PASSWORD_REQUIRED = "Please enter your password";
+        const NUMBER_REQUIRED = "Please enter your phone number";
+        const NUMBER_INVALID = "Please enter a correct number";
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+            let fname = form.elements['fname'];
+            let lname = form.elements['lname'];
+            let email = form.elements['email'];
+            let pass = form.elements['password'];
+            let number = form.elements['number'];
+            let fnameValid = hasValue(fname, FNAME_REQUIRED);
+            let lnameValid = hasValue(lname, LNAME_REQUIRED);
+            let emailValid = validateEmail(email, EMAIL_REQUIRED, EMAIL_INVALID);
+            let passValid = hasValue(pass, PASSWORD_REQUIRED);
+            let numberValid = validateNumber(number, NUMBER_REQUIRED, NUMBER_INVALID);
+            if (fnameValid && lnameValid && emailValid && numberValid) {
+                alert("Form Post");
+            }
+            //validation 
+        })
+    </script>
+</body>
+
+</html>

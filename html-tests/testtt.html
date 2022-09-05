@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            function Person(){
+                this.name="name";
+                this.age=100;
+            }
+            Person.prototype.gender="female"; //adds it to the main func
+            const obj = new Person();
+            const obj2 = new Person();
+            obj.gender="female";
+            console.log(obj.gender);
+            console.log(obj2.gender);
+
+        </script>
+    </body>
+</html>

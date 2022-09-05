@@ -3,15 +3,33 @@
 
 <head>
     <title>26-8-2022 JS Task</title>
+    <style>
+        .success {
+            color: green;
+            border: 1px solid green;
+        }
+
+        .error {
+            border: 1px solid red;
+        }
+
+        .error1 {
+            color: red;
+        }
+    </style>
 </head>
 
 <body>
     <h2>form example</h2>
     <form action="/signup" method="post" id="signup">
-        <input type="text" id="name" name="name" /><br />
-        <input type="text" id="email" name="email" /><br />
+        <div><input type="text" id="name" name="name" placeholder="name" /><br />
+            <small></small>
+        </div>
+        <div><input type="text" id="email" name="email" placeholder="email" /><br />
+            <small></small>
+        </div>
 
-        <input type="submit" value="send" />
+        <input type="submit" value="Send" />
     </form>
     <script>
         function showMessage(input, message, type) {
@@ -32,13 +50,13 @@
             return showMessage(input, message, false);
         }
         function showSuccess(input) {
-            return showMessage(input, " ", true);
+            return showMessage(input, "", true);
         }
 
         const form = document.getElementById("signup");
         const NAME_REQUIRED = "Please enter your name";
         const EMAIL_REQUIRED = "Please enter your email";
-        
+
         form.addEventListener('submit', (event) => {
             event.preventDefault();
             let name = form.elements['name'];
@@ -48,11 +66,8 @@
             if (nameValid && emailValid) {
                 alert("Form Post");
             }
-            form.submit();
-            console.log(name+" - "+email);
             //validation 
         })
-
     </script>
 </body>
 
