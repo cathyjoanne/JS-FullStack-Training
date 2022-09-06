@@ -1,0 +1,35 @@
+<!Doctype html>
+<html>
+
+<head>
+    <title> Fetch Example</title>
+</head>
+
+<body>
+    <h2> To Do List</h2>
+    <button id="btn"> Fetch To Dos</button>
+    <div id="target"></div>
+    <script>
+        let btn = document.getElementById('btn');
+        btn.addEventListener('click', function () {
+            let API = "https://jsonplaceholder.typicode.com/todos";
+            fetch(API)
+                .then(res => res.json())
+                .then(data => {
+                    let element = "<form>";
+                    data.forEach(val => {
+                        element += `<input type="checkbox"`
+                        if (val.completed) {
+                            element += `checked`
+                        }
+                        element += `><label>${val.title}</label><br>`
+                    })
+                    element += "</form>"
+                    document.getElementById("target").innerHTML = element;
+                })
+                .catch(err => console.log("Error : " + err))
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>2-9-2022 JS Task</title>
+</head>
+
+<body>
+    <script>
+
+        function validateURL(input) {
+            //validate email format 
+            const URLRegex = /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$/;
+            const URL = input.trim();
+
+            if (!URLRegex.test(URL)) {
+                return false;
+            }
+            return true;
+        }
+
+        //test url
+        text = "https://classroom.google.com/w/NDk3MjU3MzcxNDIw/t/all";
+
+        if (validateURL(text)){
+            console.log("url is valid");
+        }else{
+            console.log("url is invalid");
+        }
+    </script>
+</body>

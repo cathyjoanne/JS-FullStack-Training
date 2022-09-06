@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Fetch Example</title>
+    </head>
+    <body>
+        <h2> Fetch Users Data</h2>
+        <button id="btn"> Fetch Users</button>
+        <div id="target"></div>
+        <script>
+             let btn=document.getElementById("btn");
+             btn.addEventListener("click",function(){
+                let API="https://jsonplaceholder.typicode.com/users";
+                fetch(API)
+                .then(res=> res.json())
+                .then(data=>{
+                    let table="";
+                    table+=`<table width='90%' align='center' border='1'>
+                        <tr> <th> S.no </th> <th> Name </th> <th> Email </th> <th> Phone</th><th> Website</th> </tr>`;
+                    data.forEach((val,ind)=>{
+                       table+=`<tr> <td>${ind+1}</td> <td>${val.name}</td> <td>${val.email}</td><td>${val.phone}</td><td>${val.website}</td> </tr>`
+                    })
+                    table+=`</table>`;
+                    document.getElementById("target").innerHTML=table;
+                })
+                .catch(err=> console.log("Error : "+err))
+             })
+        </script>
+    </body>
+</html>

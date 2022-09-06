@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>2-9-2022 JS Task</title>
+</head>
+
+<body>
+    <script>
+
+        function validateZip(input) {
+            //validate zip format 
+            const zipRegex = /^\d{5}-\d{4}|\d{5}|[A-Z]\d[A-Z] \d[A-Z]\d$/;
+            const zip = input.trim();
+
+            if (!zipRegex.test(zip)) {
+                return false;
+            }
+            return true;
+        }
+
+        //test zip
+        text = "123456";
+
+        if (validateZip(text)) {
+            console.log("zip code is valid");
+        } else {
+            console.log("zip code is invalid");
+        }
+    </script>
+</body>

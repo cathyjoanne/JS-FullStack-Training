@@ -1,0 +1,27 @@
+<!Doctype html>
+<html>
+    <head>
+         <title> Fetch Example</title>
+    </head>
+    <body>
+        <h2> Latest Albums</h2>
+        <button id="btn"> Fetch Albums</button>
+        <div id="target"></div>
+        <script>
+            let btn=document.getElementById('btn');
+            btn.addEventListener('click',function(){
+                let API="https://jsonplaceholder.typicode.com/albums";
+                fetch(API)
+                .then(res=> res.json())
+                .then(data=>{
+                let element="";
+                data.forEach(val=>{
+                  element+=`<h3> ${val.id}</h3> <p> ${val.title} </p>  <hr/>`
+                })
+                document.getElementById("target").innerHTML=element;
+            })
+                .catch(err=> console.log("Error : "+err))
+            })
+        </script>
+    </body>
+</html>
