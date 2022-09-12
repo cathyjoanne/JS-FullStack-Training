@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h2> xhr example </h2>
+        <button id="btn">fetch</button>
+        <div id="target"></div>
+        <script>
+            let btn=document.getElementById("btn");
+            btn.addEventListener("click",function(){
+                let xhttp=new XMLHttpRequest();
+                xhttp.open("GET","https://jsonplaceholder.typicode.com/users","true");
+                xhttp.onreadystatechange=function(){
+                    if(xhttp.readyState==4&&xhttp.status==200){
+                        //document.getElementById("target").innerHTML=xhttp.responseText;
+                        let data=JSON.parse(xhttp.responseText);
+                        let str = "<table> <tr><th>S.no</th><th>Name</th><th>Email</th><th>Website</th></tr>";
+                        data.forEach((res,ind) => {
+                            //s.no name email website
+                            str+=`<tr><td>${ind+1}</td><td>${res.name}</td><td>${res.email}</td><td>${res.website}</td></tr>`;
+                        });
+                        str+="</table>";
+                        document.getElementById("target").innerHTML=str;
+                    }
+                }
+                xhttp.send();
+            })
+        </script>
+    </body>
+</html>

@@ -1,12 +1,12 @@
-1. Write a JavaScript program to test the first character of a string is uppercase or not.
+-1. Write a JavaScript program to test the first character of a string is uppercase or not.
 
-2. Write a JavaScript program to count number of words in string.
+-2. Write a JavaScript program to count number of words in string.
 
-3. Write a JavaScript function to check whether a given value is a valid URL or not.
+-3. Write a JavaScript function to check whether a given value is a valid URL or not.
 
-4. Write a JavaScript function to check whether a given value is US zip code or not.
+-4. Write a JavaScript function to check whether a given value is US zip code or not.
 
-5. Write a JavaScript program to sort the items of an array. 
+-5. Write a JavaScript program to sort the items of an array. 
 Sample
 array : var arr1 = [ 3, 8, 7, 6, 5, -4, 3, 2, 1 ];
 Sample

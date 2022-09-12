@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        //Write a JavaScript function to  get the number of occurrences of each letter in specified string.
+        const test = "count the number of each letter in this sentence";
+
+        //code to check number of words
+        let letter=new Array(26).fill(0);
+        for (let i = 0; i < test.length; i++) {
+            if (test.charAt(i).toUpperCase() != test.charAt(i).toLowerCase()) { //if char is a letter
+                letter[test.toLowerCase().charCodeAt(i) - 97]++; //adding one to place in array
+            }
+        }
+        console.log(letter);
+        //displays as an output a as first in the array and z as the last
+    </script>
+</body>
+
+</html>

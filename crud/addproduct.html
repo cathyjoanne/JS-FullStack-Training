@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>add products</title>
+</head>
+
+<body>
+    <a href="crudapp.html">go back</a>
+    <form method="post" id="frm">
+        <div class="form-group">
+            <label> Pname</label>
+            <input type="text" id="pname" class="form-control" />
+            <label> Price</label>
+            <input type="text" id="price" class="form-control" />
+            <label> Quantity</label>
+            <input type="text" id="quantity" class="form-control" />
+            <label> Image</label>
+            <input type="text" id="image" class="form-control" />
+        </div>
+        <input type="submit" value="Add" class="btn btn-success" />
+    </form>
+<!-- script scource bootstrap 5.0.2 here -->
+    <script>
+        document.getElementById("frm").addEventListener('submit',function(event){
+            event.preventDefault();
+            let pname=document.getElementById("pname").value;
+            let price=document.getElementById("price").value;
+            let quantity=document.getElementById("quantity").value;
+            let image=document.getElementById("image").value;
+            let postData=JSON.stringify({pname:pname,price:price,quantity:quantity,image:image});
+            const API_URL = "http://localhost:3001/products";
+            fetch(API_URL,{
+                method:'POST',
+                body:postData,
+                headers:{
+                    'Content-Type':'application/json'
+                }
+            })
+            .then(res=>res.json())
+            .then(data=>{
+                if(data){
+                    alert("product added");
+                    //redirect
+                    location.href="crudapp.html"
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

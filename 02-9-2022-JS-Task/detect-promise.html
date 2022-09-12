@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <script>
+        //Write a JavaScript program that will return true if an object looks like a Promise, false otherwise.
+        function ispromise(p){
+            if(typeof p==='object' && typeof p.then==='function'){
+                return true;
+            }
+            return false;
+        }
+
+        const prom = new Promise (resolve =>{
+            resolve(10);
+        });
+
+        console.log(ispromise(prom));//true
+    </script>
+</body>
+
+</html>

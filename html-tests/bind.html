@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script>
+            let obj={
+                name:"abc",
+                surname:"qwe",
+                getFullName: function(age,gender){
+                    console.log(this.name+" "+this.surname);
+                }
+            }
+            obj.getFullName();
+            let obj2={
+                name:"jkl",
+                surname:"iop"
+            }
+            let func=obj.getFullName.bind(obj2);
+            func();
+        </script>
+    </body>
+</html>
