@@ -18,4 +18,4 @@ class Person{
     }
 }
 const obj=new Person("anuj","sungh",23);
-console.log(obj.details())
+console.log(obj.details());
