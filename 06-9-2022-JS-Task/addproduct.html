@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>CRUD App - Add Product</title>
+</head>
+
+<body>
+    <div style="padding:5vh 50vw 5vw 5vh;">
+        <a href="crudapp.html" class="btn btn-primary">Go Back</a><br />
+        <form method="post" id="frm">
+            <div class="form-group">
+                <label> Pname</label>
+                <div>
+                    <input type="text" id="pname" name="pname" />
+                    <small></small>
+                </div>
+                <label> Price</label>
+                <div>
+                    <input type="text" id="price" name="price" />
+                    <small></small>
+                </div>
+                <label> Quantity</label>
+                <div>
+                    <input type="text" id="quantity" name="quantity" />
+                    <small></small>
+                </div>
+                <label> Image</label>
+                <div>
+                    <input type="text" id="image" name="image" />
+                    <small></small>
+                </div><br />
+            </div>
+            <input type="submit" value="Add" class="btn btn-success" />
+        </form>
+    </div>
+    <!-- script scource bootstrap 5.0.2 here -->
+    <script>
+        const form = document.getElementById("frm");
+        const PNAME_REQUIRED = "Please enter a product name";
+        const PRICE_REQUIRED = "Please enter a price";
+        const PRICE_INVALID = "Please enter a correct price";
+        const QUANTITY_REQUIRED = "Please enter a quantity";
+        const QUANTITY_INVALID = "Please enter a correct quantity";
+        const IMAGE_REQUIRED = "Please enter a image address";
+        const IMAGE_INVALID = "Please enter a correct image address";
+
+        function showMessage(input, message, type) {
+            const msg = input.parentNode.querySelector("small");
+            msg.innerText = message; //innertext cannot be null
+            input.className = type ? "success" : "error";
+            msg.className = type ? "success" : "error1";
+            return type;
+        }
+
+        function showError(input, message) {
+            return showMessage(input, message, false);
+        }
+        function showSuccess(input) {
+            return showMessage(input, "", true);
+        }
+
+        function hasValue(input, message) {
+            if (input.value.trim() === "") {
+                return showError(input, message);
+            }
+            return showSuccess(input);
+        }
+
+        function isNumber(input, reqMessage, invalidMessage) {
+            if (!hasValue(input, reqMessage)) {
+                return false;
+            }
+            if (isNaN(input.value.trim())) {
+                return showError(input, invalidMessage)
+            }
+            return true;
+        }
+
+        function isURL(input, reqMessage, invalidMessage) {
+            if (!hasValue(input, reqMessage)) {
+                return false;
+            }
+            //validate email formet 
+            const URLRegex = /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$/;
+            const URL = input.value.trim();
+            if (!URLRegex.test(URL)) {
+                return showError(input, invalidMessage)
+            }
+            return true;
+        }
+
+        function post() {
+            event.preventDefault();
+            let pname = document.getElementById("pname").value;
+            let price = document.getElementById("price").value;
+            let quantity = document.getElementById("quantity").value;
+            let image = document.getElementById("image").value;
+            let postData = JSON.stringify({ pname: pname, price: price, quantity: quantity, image: image });
+            const API_URL = "http://localhost:3000/products";
+            fetch(API_URL, {
+                method: 'POST',
+                body: postData,
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data) {
+                        alert("product added");
+                        //redirect
+                        location.href = "crudapp.html"
+                    }
+                })
+        }
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+            let pname = form.elements['pname'];
+            let price = form.elements['price'];
+            let quantity = form.elements['quantity'];
+            let image = form.elements['image'];
+            let pnameValid = hasValue(pname, PNAME_REQUIRED);
+            let priceValid = isNumber(price, PRICE_REQUIRED, PRICE_INVALID);
+            let quantityValid = isNumber(quantity, QUANTITY_REQUIRED, QUANTITY_INVALID);
+            let imageValid = isURL(image, IMAGE_REQUIRED, IMAGE_INVALID);
+            if (pnameValid && priceValid && quantityValid && imageValid) {
+                post();
+            }
+            //post();
+        })
+    </script>
+</body>
+
+</html>

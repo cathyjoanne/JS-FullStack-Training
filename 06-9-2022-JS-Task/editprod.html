@@ -1,0 +1,19 @@
+<!--not completed-->
+<script>
+    const API_URL="localhost:3002/products/";
+    const params = URLSearchParams(window.location.search);
+    if(params.has('pid')){
+        let pid = params.get('pid');
+        fetch(`${API_URL}${pid}`)
+        .then(res=>res.json())
+        .then(res=>{
+            document.getElementById("pname").value = res.pname;
+            document.getElementById("price").value = res.price;
+            document.getElementById("quantity").value=res.quantity;
+            document.getElementById("image").valueres.image;
+        })
+    }
+    document.getElementById("frm").addEventListener('submit',function(event){
+        //etc add code here
+    })
+</script>
