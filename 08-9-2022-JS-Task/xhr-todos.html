@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>8.9.2022 JS Task</title>
+</head>
+
+<body>
+    <h2>Fetch with Ajax(XHR)</h2>
+    <button id="btn">Fetch To Dos</button>
+    <div id="target"></div>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jQuery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                $.ajax({
+                    url: "https://jsonplaceholder.typicode.com/todos",
+                    success: function (res) {
+                        let data = res;
+                        let str = `<form>"`;
+                        data.forEach(res => {
+                            str += `<input type="checkbox"`
+                            if (res.completed) {
+                                str += `checked`
+                            }
+                            str += `><label>${res.title}</label><br>`
+                        })
+                        str+=`</form>`;
+                        $("#target").html(str);
+                    },
+                    error: function (err) {
+                        console.log(err)
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>
