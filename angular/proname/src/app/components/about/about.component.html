@@ -1,0 +1,13 @@
+<p>about works!</p>
+<button (click)="abc()">Toggle employee details</button>
+<br/><br/>
+<table border="1" *ngIf="status">
+    <tr>
+        <th>s.no</th>
+        <th>name</th>
+    </tr>
+    <tr *ngFor="let emp of empData; let i=index">
+        <td>{{i+1}}</td>
+        <td>{{emp.name}}</td>
+    </tr>
+</table>

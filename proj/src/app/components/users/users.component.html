@@ -1,0 +1,11 @@
+<p>users details!</p>
+<table class="table">
+    <tr>
+        <th>S.no</th>
+        <th>name</th>
+    </tr>
+    <tr *ngFor="let user of userdata; let i=index">
+        <td>{{i+1}}</td>
+        <td>{{user.name}}</td>
+    </tr>
+</table>

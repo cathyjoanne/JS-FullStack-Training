@@ -1,0 +1,6 @@
+<p>parent to child with input decorator</p>
+<button (click)="abc()">click here</button>
+<div *ngIf="childdata"> the child data is {{childdata}}
+
+</div>
+<app-inputchild [mycount]="count" (myevent)="getchild($event)"></app-inputchild>

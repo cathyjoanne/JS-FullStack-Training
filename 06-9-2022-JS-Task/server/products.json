@@ -22,11 +22,11 @@
       "id": 4
     },
     {
-      "pname": "b",
-      "price": "23",
-      "quantity": "44",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Raccoon_in_Central_Park_%2835264%29.jpg/1200px-Raccoon_in_Central_Park_%2835264%29.jpg",
-      "id": 8
+      "pname": "d",
+      "price": "2",
+      "quantity": "2",
+      "image": "https://picsum.photos/200/300",
+      "id": 5
     }
   ]
 }

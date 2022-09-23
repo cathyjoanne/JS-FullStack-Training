@@ -1,0 +1,6 @@
+<p>latest posts</p>
+<button (click)="getPosts()">fetch posts</button>
+<div *ngFor="let post of postData">
+    <h4>{{post.title}}</h4>
+    <p>{{post.body}}</p>
+</div>

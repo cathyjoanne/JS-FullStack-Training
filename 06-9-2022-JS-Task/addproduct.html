@@ -105,7 +105,7 @@
             let quantity = document.getElementById("quantity").value;
             let image = document.getElementById("image").value;
             let postData = JSON.stringify({ pname: pname, price: price, quantity: quantity, image: image });
-            const API_URL = "http://localhost:3000/products";
+            const API_URL = "http://localhost:3001/products";
             fetch(API_URL, {
                 method: 'POST',
                 body: postData,
