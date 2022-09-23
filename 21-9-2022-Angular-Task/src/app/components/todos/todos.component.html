@@ -1,0 +1,8 @@
+<div style="padding:2vw;">
+    <div *ngFor="let todo of todoData">
+        <form>
+            <input type="checkbox" [checked]="todo.completed">
+            <label>&nbsp;{{todo.title|titlecase}}</label>
+        </form>
+    </div>
+</div>

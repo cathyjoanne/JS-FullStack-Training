@@ -1,0 +1,8 @@
+<div style="padding:2vw;">
+    <p>Click below to see latest posts.</p>
+    <button (click)="getPosts()">Get Posts</button>
+    <div *ngFor="let post of postData">
+        <h3>{{post.title|titlecase}}</h3>
+        <p>{{post.body}}</p>
+    </div>
+</div>
