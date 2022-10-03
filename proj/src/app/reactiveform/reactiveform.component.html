@@ -1,0 +1,64 @@
+<h2>Reactive From Validation</h2>
+<form [formGroup]="myForm" (ngSubmit)="postData()">
+    <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" name="fullName" class="form-control" formControlName="fullName" />
+        <div *ngIf="fdata['fullName'].invalid && fdata['fullName'].touched" class="alert alert-danger">
+            <div *ngIf="fdata['fullName'].errors?.['required']">
+                Full name is required
+            </div>
+            <div *ngIf="fdata['fullName'].errors?.['pattern']">
+                only alphabet allowed
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Mobile</label>
+        <input type="text" name="mobile" class="form-control" formControlName="mobile" />
+        <div *ngIf="fdata['mobile'].invalid&&fdata['mobile'].touched" class="alert alert-danger">
+            <div *ngIf="fdata['mobile'].errors?.['required']">
+                mobile # is required
+            </div>
+            <div *ngIf="fdata['mobile'].errors?.['pattern']">
+                only numbers allowed
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Age</label>
+        <input type="text" name="age" class="form-control" formControlName="age" />
+        <div *ngIf="fdata['age'].invalid&&fdata['age'].touched" class="alert alert-danger">
+            <div *ngIf="fdata['age'].errors?.['required']">
+                age is required
+            </div>
+            <div *ngIf="fdata['age'].errors?.['ageError']">
+                only 18-45 allowed
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" name="email" class="form-control" formControlName="email" />
+        <div *ngIf="fdata['email'].invalid&&fdata['email'].touched" class="alert alert-danger">
+            <div *ngIf="fdata['email'].errors?.['required']">
+                email is required
+            </div>
+            <div *ngIf="fdata['age'].errors?.['ageError']">
+                incorrect format
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Gender</label>&nbsp;
+        <input type="radio" name="gender" value="female" formControlName="gender" />Female
+        &nbsp;
+        <input type="radio" name="gender" value="male" formControlName="gender" />Male
+        <!--errors-->
+        <div *ngIf="fdata['gender'].invalid&&fdata['gender'].touched" class="alert alert-danger">
+            <div *ngIf="fdata['gender'].errors?.['required']">
+                gender required
+            </div>
+        </div>
+    </div>
+    <input type="submit" value="Submit" class="btn btn-success" [disabled]="myForm.invalid" />
+</form>

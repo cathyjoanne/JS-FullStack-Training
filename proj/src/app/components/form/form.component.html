@@ -1,0 +1,85 @@
+<h3>Template Driven Form</h3>
+<form #myForm="ngForm" (ngSubmit)="postData()">
+    <div class="form-group">
+        <label>First Name</label>
+        <input type="text" name="f=name" class="form-control" [(ngModel)]="mydata.fName" #fnam="ngModel" required
+            pattern="[a-zA-Z ]+" />
+        <!--errors-->
+        <div *ngIf="fnam.invalid && fnam.touched" class="alert alert-danger">
+            <div *ngIf="fnam.errors?.['required']">First name is required</div>
+            <div *ngIf="fnam.errors?.['pattern']">Only alphabetical values allowed</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" name="lname" class="form-control" [(ngModel)]="mydata.lName" #lnam="ngModel" required
+            pattern="[a-zA-Z ]+" />
+        <!--errors-->
+        <div *ngIf="lnam.invalid && lnam.touched" class="alert alert-danger">
+            <div *ngIf="lnam.errors?.['required']">Last name is required</div>
+            <div *ngIf="lnam.errors?.['pattern']">Only alphabetical values allowed</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" name="email" class="form-control" [(ngModel)]="mydata.email" #eml="ngModel" required
+            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
+        <!--errors-->
+        <div *ngIf="eml.invalid && eml.touched" class="alert alert-danger">
+            <div *ngIf="eml.errors?.['required']">Email is required</div>
+            <div *ngIf="eml.errors?.['pattern']">Email in incorrect format</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Gender</label> &nbsp;
+        <input type="radio" name="gender" value="female" [(ngModel)]="mydata.gender" #gen="ngModel" required />Female
+        &nbsp;
+        <input type="radio" name="gender" value="male" [(ngModel)]="mydata.gender" #gen="ngModel" required />Male
+        <!--errors-->
+        <div *ngIf="gen.invalid && gen.touched" class="alert alert-danger">
+            <div *ngIf="gen.errors?.['required']">Gender is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Hobbies: </label>&nbsp;&nbsp;&nbsp;
+        <div class="checkbox-group required">
+            <input type="checkbox" value="sleeping" [(ngModel)]="mydata.hobbies" #hob1="ngModel"
+                required />&nbsp;Sleeping
+            &nbsp;&nbsp;&nbsp;
+            <input type="checkbox" value="reading" [(ngModel)]="mydata.hobbies" #hob2="ngModel" required />&nbsp;Reading
+            &nbsp;&nbsp;&nbsp;
+            <input type="checkbox" value="cooking" [(ngModel)]="mydata.hobbies" #hob3="ngModel" required />&nbsp;Cooking
+            &nbsp;&nbsp;&nbsp;
+            <input type="checkbox" value="sports" [(ngModel)]="mydata.hobbies" #hob4="ngModel" required />&nbsp;Sports
+        </div>
+        <!--errors-->
+        <div *ngIf="hob1.invalid && hob1.touched" class="alert alert-danger">
+            <div>Please choose atleast one hobby</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>City:</label>&nbsp;&nbsp;&nbsp;
+        <select id="city" name="cars" [(ngModel)]="mydata.city" #city="ngModel" required>
+            <option disabled selected value> -- select an option --</option>
+            <option value="nyc">NYC</option>
+            <option value="la">LA</option>
+            <option value="sf">SF</option>
+        </select>
+        <!--errors-->
+        <div *ngIf="city.invalid && city.touched" class="alert alert-danger">
+            <div *ngIf="city.errors?.['required']">City is required</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Remarks: </label>
+        <input type="text" name="remark" class="form-control" [(ngModel)]="mydata.remark" #rem="ngModel" required
+            pattern="^[a-zA-Z]{20,}$" />
+        <!--errors-->
+        <div *ngIf="rem.invalid && rem.touched" class="alert alert-danger">
+            <div *ngIf="rem.errors?.['required']">Remark is required</div>
+            <div *ngIf="rem.errors?.['pattern']">Remark needs to be more than 20 characters</div>
+        </div>
+    </div>
+    <br>
+    <input type="submit" value="Add" class="btn btn-success" [disabled]="myForm.invalid" />
+</form>

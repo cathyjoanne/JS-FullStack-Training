@@ -14,6 +14,9 @@ import { InputchildComponent } from './components/inputchild/inputchild.componen
 import { MyviewchildComponent } from './components/myviewchild/myviewchild.component';
 import { AboutComponent } from './components/about/about.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { FormComponent } from './components/form/form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 
 @NgModule({
   declarations: [
@@ -27,12 +30,16 @@ import { GalleryComponent } from './components/gallery/gallery.component';
     InputchildComponent,
     MyviewchildComponent,
     AboutComponent,
-    GalleryComponent
+    GalleryComponent,
+    FormComponent,
+    ReactiveformComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
