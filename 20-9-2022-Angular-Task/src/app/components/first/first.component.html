@@ -1,0 +1,23 @@
+<div style="padding:2vw;">
+    <h4>Practice on expression, ngIf , ngFor , event binding , property binding and 2 way data binding</h4>
+    <hr>
+    <h5>Event Binding & ngIf:</h5>
+    <button type="button" (click)="showMessage()">Click to Show Message</button>
+    <div *ngIf="!showBool"><br></div>
+    <p *ngIf="showBool">This message was displayed with event binding and ngIf!</p>
+    <hr>
+    <h5>Property Binding & ngFor:</h5>
+    <div *ngFor="let img of images" style="white-space: nowrap; display: inline;">
+        <img [src]="img">
+    </div>
+    <hr>
+    <h5>2 Way Data Binding & Expression:</h5>
+    <p>(parent in blue and child in pink)</p>
+    <div style="background-color:lightblue;">
+        <button (click)="abc()">Click Here</button>
+        <p>Child Count (from parent): {{childdata}}</p>
+    </div>
+    <div style="background-color:pink;">
+        <app-firstchild [mycount]="count" (myevent)="getchild($event)"></app-firstchild>
+    </div>
+</div>

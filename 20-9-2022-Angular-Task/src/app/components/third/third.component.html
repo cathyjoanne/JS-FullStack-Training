@@ -1,0 +1,19 @@
+
+<div style="padding:2vw;">
+    <h4>Create a products components and display 10 products from json data and render in the component (use bootstrap
+        card component)<br>
+        -> in one row only 3 products are display.</h4>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4" style="padding:2vw;">
+        <div class="col" *ngFor="let pro of prodata">
+            <div class="card h-100">
+                <img [src]="pro.image" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{pro.pname}}</h5>
+                    <p class="card-text">price: {{pro.price}}<br>quantity: {{pro.quantity}}</p>
+                    <a href="#" class="btn btn-primary">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
