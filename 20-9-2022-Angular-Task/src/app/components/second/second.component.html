@@ -2,6 +2,35 @@
     <h4>Practice ngSwitch , ngStyle , ngClass</h4>
     <hr>
     <h5>ngSwitch:</h5>
+    <p>Choose a color:</p>
+    <button type="button" (click)="isblue()">Blue</button>
+    <button type="button" (click)="ispink()">Pink</button>
+    <button type="button" (click)="isgreen()">Green</button>
+    <div [ngSwitch]="color">
+        <div *ngSwitchCase="'lightblue'">
+            <p>Blue is the color of the sky.</p>
+        </div>
+        <div *ngSwitchCase="'lightpink'">
+            <p>Pink is the color of flowers.</p>
+        </div>
+        <div *ngSwitchCase="'lightgreen'">
+            <p>Green is the color of leaves.</p>
+        </div>
+        <div *ngSwitchDefault>
+            <p>Choose a color!</p>
+        </div>
+    </div>
+    <hr>
     <h5>ngStyle:</h5>
+    <div [ngStyle]="{'background-color':color}">
+        <p>this background color is based off those buttons above!!</p>
+    </div>
+    <hr>
     <h5>ngClass:</h5>
+    <div [ngClass]="{
+        'text-success':color==='lightgreen',
+        'text-primary':color==='lightblue',
+        'text-danger':color ==='lightpink'}">
+        <p>the color of this text is based off those buttons above!!</p>
+    </div>
 </div>
